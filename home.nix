@@ -18,6 +18,7 @@
    pkgs.tldr
    pkgs.fd
    pkgs.ctags
+   pkgs.tmux
 
    # Wayland
    pkgs.grim  
