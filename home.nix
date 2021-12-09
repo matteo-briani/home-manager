@@ -5,6 +5,8 @@
   programs.home-manager.enable = true;
 
   home.packages = [
+
+   # Command Line
    pkgs.neovim
    pkgs.jq
    pkgs.ripgrep
@@ -15,6 +17,12 @@
    pkgs.nmap
    pkgs.tldr
    pkgs.fd
+   pkgs.ctags
+
+   # Wayland
+   pkgs.grim  
+   pkgs.slurp  
+
   ];
 
   # Home Manager needs a bit of information about you and the
@@ -34,7 +42,7 @@
 
   programs.fish = {
     enable = true;
-    shellInit = "fish_add_path /home/spalla/.nix-profile/bin/;set -x EDITOR nvim; bass /home/spalla/.nix-profile/etc/profile.d/nix.sh";
+    shellInit = "set -U fish_user_paths $fish_user_paths /home/spalla/.nix-profile/bin/;set -U fish_user_paths $fish_user_paths /opt/aws-vault/;set -x EDITOR nvim; bass /home/spalla/.nix-profile/etc/profile.d/nix.sh";
   };
   programs.fish.plugins = [
     {
