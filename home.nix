@@ -10,7 +10,6 @@
    pkgs.neovim
    pkgs.jq
    pkgs.ripgrep
-   pkgs.python3
    pkgs.git
    pkgs.fish
    pkgs.curl
@@ -19,6 +18,9 @@
    pkgs.fd
    pkgs.ctags
    pkgs.tmux
+
+   pkgs.python3
+   pkgs.cargo
 
    # Wayland
    pkgs.grim  
