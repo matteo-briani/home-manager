@@ -45,7 +45,8 @@
 
   programs.fish = {
     enable = true;
-    shellInit = "set -U fish_user_paths $fish_user_paths /home/spalla/.nix-profile/bin/;set -U fish_user_paths $fish_user_paths /opt/aws-vault/;set -x EDITOR nvim; bass /home/spalla/.nix-profile/etc/profile.d/nix.sh";
+    # shellInit = "set -U fish_user_paths $fish_user_paths /home/spalla/.nix-profile/bin/;set -U fish_user_paths $fish_user_paths /opt/aws-vault/;set -x EDITOR nvim; bass /home/spalla/.nix-profile/etc/profile.d/nix.sh";
+    shellInit = "bass /home/spalla/.nix-profile/etc/profile.d/nix.sh";
   };
   programs.fish.plugins = [
     {
