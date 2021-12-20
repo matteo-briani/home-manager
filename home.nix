@@ -21,11 +21,14 @@
 
    pkgs.python3
    pkgs.cargo
+   pkgs.rustc
 
    # Wayland
    pkgs.grim  
    pkgs.slurp  
 
+   # Common dev library
+   pkgs.openssl.dev  
   ];
 
   # Home Manager needs a bit of information about you and the
