@@ -22,6 +22,7 @@
    pkgs.python3
    pkgs.cargo
    pkgs.rustc
+   pkgs.pkg-config
 
    # Wayland
    pkgs.grim  
