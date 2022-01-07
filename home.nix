@@ -22,6 +22,9 @@
    pkgs.python3
    pkgs.cargo
    pkgs.rustc
+   pkgs.rustfmt
+   pkgs.rust-analyzer
+   pkgs.clippy
    pkgs.pkg-config
 
    # Wayland
@@ -30,6 +33,7 @@
 
    # Common dev library
    pkgs.openssl.dev  
+   # pkgs.openssl  
   ];
 
   # Home Manager needs a bit of information about you and the
@@ -49,7 +53,7 @@
 
   programs.fish = {
     enable = true;
-    # shellInit = "set -U fish_user_paths $fish_user_paths /home/spalla/.nix-profile/bin/;set -U fish_user_paths $fish_user_paths /opt/aws-vault/;set -x EDITOR nvim; bass /home/spalla/.nix-profile/etc/profile.d/nix.sh";
+    /* shellInit = "set -U fish_user_paths $fish_user_paths /home/spalla/.nix-profile/bin/;set -U fish_user_paths $fish_user_paths /opt/aws-vault/;set -x EDITOR nvim; bass /home/spalla/.nix-profile/etc/profile.d/nix.sh"; */
     shellInit = "bass /home/spalla/.nix-profile/etc/profile.d/nix.sh";
   };
   programs.fish.plugins = [
